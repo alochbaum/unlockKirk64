@@ -44,6 +44,7 @@
             // 
             // rTBoutgoing
             // 
+            this.rTBoutgoing.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTBoutgoing.Location = new System.Drawing.Point(19, 280);
             this.rTBoutgoing.Name = "rTBoutgoing";
             this.rTBoutgoing.Size = new System.Drawing.Size(728, 227);
