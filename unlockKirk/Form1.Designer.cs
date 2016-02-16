@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rTBIncoming = new System.Windows.Forms.RichTextBox();
             this.rTBoutgoing = new System.Windows.Forms.RichTextBox();
-            this.btDecode = new System.Windows.Forms.Button();
+            this.btnDecode = new System.Windows.Forms.Button();
+            this.cbWriteOutHex = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // rTBIncoming
@@ -51,27 +52,41 @@
             this.rTBoutgoing.TabIndex = 0;
             this.rTBoutgoing.Text = "";
             // 
-            // btDecode
+            // btnDecode
             // 
-            this.btDecode.Location = new System.Drawing.Point(25, 249);
-            this.btDecode.Name = "btDecode";
-            this.btDecode.Size = new System.Drawing.Size(138, 21);
-            this.btDecode.TabIndex = 1;
-            this.btDecode.Text = "Decode";
-            this.btDecode.UseVisualStyleBackColor = true;
-            this.btDecode.Click += new System.EventHandler(this.btDecode_Click);
+            this.btnDecode.Location = new System.Drawing.Point(19, 248);
+            this.btnDecode.Name = "btnDecode";
+            this.btnDecode.Size = new System.Drawing.Size(125, 26);
+            this.btnDecode.TabIndex = 1;
+            this.btnDecode.Text = "Decode";
+            this.btnDecode.UseVisualStyleBackColor = true;
+            this.btnDecode.Click += new System.EventHandler(this.btDecode_Click);
+            // 
+            // cbWriteOutHex
+            // 
+            this.cbWriteOutHex.AutoSize = true;
+            this.cbWriteOutHex.Checked = true;
+            this.cbWriteOutHex.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbWriteOutHex.Location = new System.Drawing.Point(164, 256);
+            this.cbWriteOutHex.Name = "cbWriteOutHex";
+            this.cbWriteOutHex.Size = new System.Drawing.Size(93, 17);
+            this.cbWriteOutHex.TabIndex = 2;
+            this.cbWriteOutHex.Text = "Write Out Hex";
+            this.cbWriteOutHex.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 519);
-            this.Controls.Add(this.btDecode);
+            this.Controls.Add(this.cbWriteOutHex);
+            this.Controls.Add(this.btnDecode);
             this.Controls.Add(this.rTBoutgoing);
             this.Controls.Add(this.rTBIncoming);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,7 +94,8 @@
 
         private System.Windows.Forms.RichTextBox rTBIncoming;
         private System.Windows.Forms.RichTextBox rTBoutgoing;
-        private System.Windows.Forms.Button btDecode;
+        private System.Windows.Forms.Button btnDecode;
+        private System.Windows.Forms.CheckBox cbWriteOutHex;
     }
 }
 

@@ -23,28 +23,29 @@ namespace unlockKirk
 
         private void btDecode_Click(object sender, EventArgs e)
         {
-            btDecode.Text = "Hit the button ";
-            btDecode.Enabled = false;
+            btnDecode.Text = "Hit the button ";
+            btnDecode.Enabled = false;
             // try the decode
             decodeB64();
-            int iDataLen = binaryData.GetLength(0);
-            rTBoutgoing.Text += "number of bytes is " + iDataLen.ToString();
-            int iMax = iDataLen / 16;
-            for (int i = 0; i < iMax; i++)
+            if (cbWriteOutHex.Checked) 
             {
-                writeLine(i);
+                int iDataLen = binaryData.GetLength(0);
+                rTBoutgoing.Text += "number of bytes is " + iDataLen.ToString();
+                int iMax = iDataLen / 16;
+                for (int i = 0; i < iMax; i++)
+                {
+                    writeLine(i);
+                }
             }
+            OmniGridData myGridData = new OmniGridData(binaryData);
+            rTBoutgoing.Text += myGridData.GetHeaderStr(0);
         }
         private void decodeB64()
         {
-
             try
             {
                 binaryData =
                    System.Convert.FromBase64String(rTBIncoming.Text);
-
-           //     OmniGridData myGridData = new OmniGridData();
-
             }
             catch (System.ArgumentNullException)
             {
