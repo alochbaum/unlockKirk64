@@ -85,6 +85,14 @@ namespace unlockKirk
             rTBoutgoing.Text += strTemp;
             //
         }
+
+        private void btnTestHeader_Click(object sender, EventArgs e)
+        {
+            // Clearing text
+            rTBoutgoing.Text = "";
+            byte[] baEight = Enumerable.Repeat((byte)0x00, 8).ToArray();
+            rTBoutgoing.Text = Convert.ToBase64String(baEight);
+        }
         //private static byte[] Decompress(byte[] input)
         //{
         //    byte[] bOutput;
