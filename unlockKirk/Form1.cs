@@ -39,6 +39,9 @@ namespace unlockKirk
             }
             OmniGridData myGridData = new OmniGridData(binaryData);
             rTBoutgoing.Text += myGridData.GetHeaderStr(0);
+            rTBoutgoing.Text += "\r\n";
+            rTBoutgoing.Text += "Size of Object = " + myGridData.GetSize(4).ToString();
+            rTBoutgoing.Text += "\r\n";
         }
         private void decodeB64()
         {

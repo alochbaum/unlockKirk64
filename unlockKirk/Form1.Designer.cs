@@ -66,8 +66,6 @@
             // cbWriteOutHex
             // 
             this.cbWriteOutHex.AutoSize = true;
-            this.cbWriteOutHex.Checked = true;
-            this.cbWriteOutHex.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbWriteOutHex.Location = new System.Drawing.Point(164, 256);
             this.cbWriteOutHex.Name = "cbWriteOutHex";
             this.cbWriteOutHex.Size = new System.Drawing.Size(93, 17);
